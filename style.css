@@ -1,0 +1,324 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+    /* font-size: 16px; */
+    font-size: calc(14px + 4*(100vw/920));
+    /* минимальный размер шрифта (px) + разница между минимальным и максимальным размером шрифтом * ((100vw)- стандартная величина / максимальный размер экрана) */
+    line-height: 40px;
+    color: rgb(47, 47, 47);
+}
+
+.page{
+    min-height: 100vh;
+    position: relative;
+}
+
+.wrapper{
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.wrapper .page .card .price{
+    text-decoration:underline;
+    font-weight: bold;
+}
+
+.wrapper .page1 .card a,
+.wrapper .page2 .card a,
+.wrapper .page4 .card a{
+    background: rgba(9, 86, 68, 0.338);
+    margin: 0 auto;
+    max-width: max-content;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 5px 30px;
+    border-radius: 30px 30px 5px 5px;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+    transition: 1s;
+    font-weight: bold;
+}
+
+.wrapper .page3 .card a{
+    background: rgba(9, 86, 68, 0.338);
+    /* margin: 0 auto; */
+    margin: 0 0 0 150px;
+    /* max-width: max-content; */
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 5px 30px;
+    border-radius: 30px 30px 5px 5px;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+    transition: 1s;
+    font-weight: bold;
+}
+
+.wrapper .page1 .card a:hover,
+.wrapper .page2 .card a:hover,
+.wrapper .page4 .card a:hover{
+    background: rgb(9, 86, 68);
+    margin: 0 auto;
+    max-width: max-content;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 5px 30px;
+    border-radius: 5px 5px 30px 30px;
+    transform: scale (1s);
+    font-size: 28px;
+}
+
+.wrapper .page3 .card a:hover{
+    background: rgb(9, 86, 68);
+    /* margin: 0 auto; */
+    margin: 0 0 0 150px;
+    /* max-width: max-content; */
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 5px 30px;
+    border-radius: 5px 5px 30px 30px;
+    transform: scale (1s);
+    font-size: 28px;
+}
+
+.page1 .card,
+.page2 .card,
+.page3 .card{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper .page1 .card,
+.wrapper .page2 .card,
+.wrapper .page3 .card,
+.wrapper .page4 .card{
+    border: 1px dashed rgb(255, 255, 255);
+    transition: 2s;
+}
+
+.wrapper .page1 .card:hover,
+.wrapper .page2 .card:hover,
+.wrapper .page3 .card:hover,
+.wrapper .page4 .card:hover{
+    border: 2px dashed rgb(9, 86, 68);
+    /* transform: scale (2s); */
+}
+
+
+/* -------------------------------inline */
+
+.page1 .card .foto,
+.page1 .card .text {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+}
+
+.page1 .card .text a{
+    display: block;
+    text-align: center;
+}
+
+.page1 .card .foto img{
+    width: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.page1 .card .foto img:hover{
+    transform: scale(1.1);
+}
+
+/* .page1 .card .text{
+    position: absolute;
+    vertical-align: middle;
+} */
+
+
+/* табличный
+флоат
+дисплей инлайн блок */
+
+/* -------------------------------inline end */
+
+/* ------------------------------------table */
+
+.page2 .card .foto,
+.page2 .card .text {
+    width: 50%;
+    vertical-align: top;
+    padding: 25px;
+}
+
+.page2 .card .fotoMin{
+    padding: 25px;
+    display: none;
+    
+}
+
+.page2 .card .foto img,
+.page2 .card .fotoMin img{
+    width: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.page2 .card .foto img:hover,
+.page2 .card .fotoMin img:hover{
+    transform: scale(1.1);
+}    
+
+.page2 .card .text a{
+    display: block;
+    text-align: center;
+}
+
+
+
+/* ------------------------------------table end */
+
+/* ------------------------------------float */
+
+.page3 .card .foto,
+.page3 .card .text {
+    /* width: 50%; */
+    vertical-align: top;
+    padding: 25px;
+}
+
+.page3 .card .foto{
+    float: left;
+    width: 50%;
+    /* height: 270px; */
+}
+
+/* .page3 .card .text{
+    float: left;
+} */
+
+.page3 .card .text a{
+    /* display: block; */
+    text-align: center;
+    /* margin: 0 0 0 170px; */
+}
+
+.page3 .card .foto img{
+    width: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.page3 .card .foto img:hover{
+    transform: scale(1.1);
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* .page4 .pageWrapper p:nth-child(1){ */
+    /* visibility: hidden; */
+    /* opacity: 0; */
+    /* display: none;
+} */
+/* -------------------------------------Flex */
+
+.page4 .pageWrapper{
+    display:flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.page4 .pageWrapper .card{
+    /* outline: 1px solid red; */
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.page4 .pageWrapper .card .text{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.page4 .pageWrapper .card .text a{
+    display: flex;
+    justify-content: center;
+}
+
+.page4 .card .foto img{
+    width: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.page4 .card .foto img:hover{
+    transform: scale(1.1);
+}
+
+.page4 .card .foto,
+.page4 .card .text {
+    width: 50%;
+    /* vertical-align: top; */
+    padding: 25px;
+}
+
+/* .page4 .pageWrapper .card .foto{
+    display: flex;
+    width: 50%;
+} */
+
+/* ------------------------------------адаптив */
+
+@media (max-width:550px){
+    .page1 .card .foto,
+    .page1 .card .text{ 
+        width: 100%;
+    }
+
+    .page2 .card .foto{
+        display: none;
+    }
+
+    .page2 .card .fotoMin{
+        display: block;
+    }
+
+    .page2 .card .text{
+        width: 100%;
+    }
+
+    .page3 .card .foto{
+        width: 100%;
+        float: none;
+    }
+
+    .page4 .pageWrapper .card{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .page4 .card .foto,
+    .page4 .card .text {
+        width: 100%;
+        /* vertical-align: top; */
+        /* padding: 25px; */
+    }
+}

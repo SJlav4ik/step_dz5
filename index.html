@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Карточка товара разными методами</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Tapestry&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="page1" class="page1 page">
+        page1 Inline <a href="#page2">next page</a>
+        <!-- <div class="pageWrapper"> -->
+          <div class="card">
+            <div class="foto">
+              <img src="image/orig.jpg" alt="" />
+            </div><div class="text">
+              <h2>Смартфон Samsung Galaxy S22 5G SM-S901B/DS 8GB/256GB</h2><br>
+              <p>
+                Android, экран 6.1" AMOLED (1080x2340), Exynos 2200, ОЗУ 8 ГБ, флэш-память 256 ГБ, камера 50 Мп, аккумулятор 3700 мАч, 2 SIM
+              </p>
+              <p class="price">2999,00 р.</p><br>
+              <a href="#" class="btn">В корзину</a>
+            </div>
+          </div>
+        <!-- </div> -->
+      </div>
+      <div id="page2" class="page2 page">
+        page2 Table <a href="#page3">next page</a>
+        <table class="card">
+        <tr>
+            <td class="fotoMin">
+                <img src="image/orig.jpg" alt="" />
+            </td>
+        </tr>
+            <tr>
+                <td class="foto"> <img src="image/orig.jpg" alt="" />
+                </td>
+                <td class="text">  <h2>Смартфон Samsung Galaxy S22 5G SM-S901B/DS 8GB/256GB</h2><br>
+              <p>
+                Android, экран 6.1" AMOLED (1080x2340), Exynos 2200, ОЗУ 8 ГБ, флэш-память 256 ГБ, камера 50 Мп, аккумулятор 3700 мАч, 2 SIM
+              </p>
+              <p class="price">2999,00 р.</p><br>
+              <div><a href="#" class="btn">В корзину</a></div>
+              </td>
+            </tr>
+        </table>
+      </div>
+      <div id="page3" class="page3 page">
+        page3 Float <a href="#page4">next page</a>
+          <div class="card clearfix">
+            <div class="foto clearfix">
+              <img src="image/orig.jpg" alt="" />
+            </div><div class="text">
+              <h2>Смартфон Samsung Galaxy S22 5G SM-S901B/DS 8GB/256GB</h2><br>
+              <p>
+                Android, экран 6.1" AMOLED (1080x2340), Exynos 2200, ОЗУ 8 ГБ, флэш-память 256 ГБ, камера 50 Мп, аккумулятор 3700 мАч, 2 SIM
+              </p>
+              <p class="price">2999,00 р.</p><br>
+              <a href="#" class="btn">В корзину</a>
+            </div>
+          </div>    
+      </div>
+      <div id="page4" class="page4 page">
+        page4 Flex <a href="#">next page</a>
+        <div class="pageWrapper">
+          <div class="card">
+            <div class="foto">
+              <img src="image/orig.jpg" alt="" />
+            </div>
+            <div class="text">
+              <h2>Смартфон Samsung Galaxy S22 5G SM-S901B/DS 8GB/256GB</h2><br>
+              <p>
+                Android, экран 6.1" AMOLED (1080x2340), Exynos 2200, ОЗУ 8 ГБ, флэш-память 256 ГБ, камера 50 Мп, аккумулятор 3700 мАч, 2 SIM
+              </p>
+              <p class="price">2999,00 р.</p><br>
+              <a href="#" class="btn">В корзину</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
